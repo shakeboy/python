@@ -1,0 +1,16 @@
+#定义非递归函数.
+def gys(m,n):
+  if m > n:
+    smaller = n
+  else:
+    smaller = m
+  for i in range(smaller,1,-1):
+    if ((m % i == 0) and (n % i == 0)):
+      gys = i
+      break
+  return gys
+
+if __name__ == '__main__':
+  num1 = int(input("请输入第一个整数: "))
+  num2 = int(input("请输入第二个整数: "))
+  print(num1,"和",num2,"的最大公约数为",gys(num1,num2))
